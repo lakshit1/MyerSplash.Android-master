@@ -4,26 +4,13 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    signingConfigs {
-        release {
-            def properties = new Properties()
-            properties.load(project.rootProject.file('local.properties').newDataInputStream())
-            def key = properties.getProperty('key')
-            def password = properties.getProperty('password')
 
-            keyAlias key
-            keyPassword password
-            storeFile file('keystore/ms.jks')
-            storePassword password
-        }
-    }
-
-    compileSdkVersion '28'
+    compileSdkVersion 28
     buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.juniperphoton.myersplash"
-        minSdkVersion '21'
-        targetSdkVersion '28'
+        minSdkVersion 21
+        targetSdkVersion 28
         versionCode 434
         versionName "3.2.4"
 
@@ -39,6 +26,20 @@ android {
             annotationProcessorOptions {
                 arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
             }
+        }
+    }
+
+signingConfigs {
+        release {
+            def properties = new Properties()
+            properties.load(project.rootProject.file('local.properties').newDataInputStream())
+            def key = properties.getProperty('key')
+            def password = properties.getProperty('password')
+
+            keyAlias key
+            keyPassword password
+            storeFile file('keystore/ms.jks')
+            storePassword password
         }
     }
 
