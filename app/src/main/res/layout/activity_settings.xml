@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/black"
+              android:orientation="vertical">
+
+    <include layout="@layout/status_placeholder"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.juniperphoton.myersplash.widget.CommonTitleBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/settings_title"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsSubTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/personalization"/>
+
+                <com.juniperphoton.myersplash.widget.SettingsItemLayout
+                    android:id="@+id/quickDownloadSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:has_checkbox="true"
+                    app:preference_key="@string/preference_key_quick_download"
+                    app:setting_content="@string/settings_quick_download"
+                    app:setting_title="@string/settings_quick_download_title"/>
+
+                <com.juniperphoton.myersplash.widget.SettingsItemLayout
+                    android:id="@+id/metered_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:default_value="true"
+                    app:has_checkbox="true"
+                    app:preference_key="@string/preference_key_download_via_metered_network"
+                    app:setting_content="@string/settings_download_metered"
+                    app:setting_title="@string/settings_download_metered_title"/>
+
+                <TextView
+                    style="@style/SettingsSubTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quality"/>
+
+                <com.juniperphoton.myersplash.widget.SettingsItemLayout
+                    android:id="@+id/savingQualitySettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:setting_content="@string/settings_saving_high"
+                    app:setting_title="@string/settings_saving_quality"/>
+
+                <com.juniperphoton.myersplash.widget.SettingsItemLayout
+                    android:id="@+id/loadingQualitySettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:setting_content="@string/settings_loading_large"
+                    app:setting_title="@string/settings_loading_quality"
+                    app:show_divider="false"/>
+
+                <TextView
+                    style="@style/SettingsSubTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clear_options"/>
+
+                <com.juniperphoton.myersplash.widget.SettingsItemLayout
+                    android:id="@+id/settingClearDatabase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:setting_content="@string/the_will_only_clear_the_list_in_app"
+                    app:setting_title="@string/cleanup_downloads_list"/>
+
+                <com.juniperphoton.myersplash.widget.SettingsItemLayout
+                    android:id="@+id/clearCacheSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:setting_content="@string/zero_size"
+                    app:setting_title="@string/settings_clean_up_cache"
+                    app:show_divider="false"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_navigation_bar_height"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.juniperphoton.myersplash.widget.edit.PreviewDraweeLayout
+        android:id="@+id/previewDraweeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/previewImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:actualImageScaleType="centerInside"/>
+    </com.juniperphoton.myersplash.widget.edit.PreviewDraweeLayout>
+
+    <View
+        android:id="@+id/maskView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/homePreview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/bottomBar"
+        android:alpha="0"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:alpha="1">
+
+        <include
+            layout="@layout/widget_edit_home_pixel"
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:layout_marginTop="30dp"
+            tools:alpha="1"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/image_desc"
+            android:scaleType="fitEnd"
+            android:src="@drawable/preview"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/HalfBlack"
+        android:clickable="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:drawableLeft="@drawable/ic_brightness_white"
+            android:drawablePadding="12dp"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:text="@string/dim_the_brightness"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dim_layout_margin_around"
+            android:layout_marginTop="@dimen/dim_layout_margin_around"
+            android:layout_marginRight="@dimen/dim_layout_margin_around"
+            android:layout_marginBottom="@dimen/dim_margin_bottom">
+
+            <TextView
+                android:id="@+id/progressText"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/MyerSplashThemeColor"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <SeekBar
+                android:id="@+id/brightnessSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:max="70"
+                android:progress="0"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edit_fabs_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingTop="30dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottomBar">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/editPreviewFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/ic_apps_black"
+            app:backgroundTint="@color/LightGray"
+            app:fabSize="mini"/>
+
+        <com.juniperphoton.flipperlayout.FlipperLayout
+            android:id="@+id/flipperLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:defaultIndex="0"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tapToFlip="false">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/editConfirmFab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/small_download_ok"
+                app:backgroundTint="@color/MyerSplashThemeColor"
+                app:fabSize="normal"/>
+
+            <FrameLayout
+                android:layout_width="@dimen/flipper_fab_size"
+                android:layout_height="@dimen/flipper_fab_size">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/edit_cancel_fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_clear"
+                    app:backgroundTint="@color/MyerSplashLikedHeartColor"
+                    app:fabSize="normal"/>
+
+                <com.juniperphoton.myersplash.widget.RingProgressView
+                    android:id="@+id/progressView"
+                    style="@style/DefaultRingProgress"
+                    app:custom_progress="30"/>
+            </FrameLayout>
+        </com.juniperphoton.flipperlayout.FlipperLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

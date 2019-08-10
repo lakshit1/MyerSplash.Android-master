@@ -1,0 +1,123 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">MyerSplash</string>
+    <string name="settings_title">SETTINGS</string>
+
+    <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+
+    <string name="settings_credit_content">Photos are from Unsplash, an amazing website providing free high-resolution photos.</string>
+    <string name="settings_saving_quality">Save</string>
+    <string name="settings_loading_quality">Thumbnails</string>
+    <string name="settings_clean_up_cache">Clean up cache</string>
+
+    <string name="settings_quick_download">Show download button in list</string>
+    <string name="settings_quick_download_title">Download shortcut</string>
+
+    <string name="settings_download_metered">Enable this will warn you before starting download</string>
+    <string name="settings_download_metered_title">Metered network warning</string>
+
+    <string name="image_desc">Desc</string>
+
+    <string name="settings_saving_highest">Raw</string>
+    <string name="settings_saving_high">High (Default)</string>
+    <string name="settings_saving_medium">Medium (Not recommended)</string>
+
+    <string name="settings_loading_large">Large (Recommended)</string>
+    <string name="settings_loading_small">Small</string>
+    <string name="settings_loading_thumb">Thumbnail</string>
+
+    <string name="feedback_str">I have an idea</string>
+    <string name="credit">CREDIT</string>
+    <string name="feedback">FEEDBACK</string>
+    <string name="give_me_a_rate">Give me a rate</string>
+    <string name="like_this_app">LIKE THIS APP</string>
+    <string name="myer" translatable="false">Myer</string>
+    <string name="splash" translatable="false">Splash</string>
+    <string name="for_windows_amp_android" translatable="false"><![CDATA[for Windows 10 & Android]]></string>
+    <string name="search">SEARCH PHOTOS</string>
+    <string name="searchLowercase">Search</string>
+    <string name="downloadLowercase">Downloads</string>
+    <string name="settingsLowercase">Settings</string>
+    <string name="aboutLowercase">About</string>
+
+    <string name="random">Random</string>
+
+    <string name="search_in_english">Search in English</string>
+    <string name="no_item">NO ITEMS</string>
+    <string name="search_by_other_keywords">SEARCH BY OTHER KEYWORDS</string>
+    <string name="return_to_content">RETURN TO %s</string>
+    <string name="set_as_wallpaper">EDIT AND SET AS</string>
+    <string name="search_action" translatable="false">android.myersplash.action.search</string>
+    <string name="random_action" translatable="false">android.myersplash.action.search</string>
+    <string name="buy_me_a_drink" translatable="false">Treat me a drink via Alipay</string>
+    <string name="downloads">DOWNLOADS</string>eat
+    <string name="no_downloads">NO DOWNLOADS</string>
+    <string name="cleanup_downloads_list">Clean up downloads list</string>
+    <string name="the_will_only_clear_the_list_in_app">The will only clear the list in app</string>
+    <string name="zero_size" translatable="false">0 MB</string>
+    <string name="clear_options">CLEAR OPTIONS</string>
+    <string name="personalization">PERSONALIZATION</string>
+    <string name="quality">QUALITY</string>
+
+    <string name="saved">Saved :D</string>
+    <string name="tap_to_open_manage">Tap to manage your wallpapers</string>
+    <string name="download_error">Download error :(</string>
+    <string name="download_error_retry">Please check your network and retry.</string>
+    <string name="retry_act">RETRY</string>
+    <string name="clear_options_title">CLEAR OPTIONS</string>
+    <string name="cancel" tools:ignore="ButtonCase">CANCEL</string>
+    <string name="cancelled_download">Download has been cancelled</string>
+    <string name="downloading">Downloading…</string>
+    <string name="completed">Completed</string>
+    <string name="no_permission">No permission to write file into external storage.</string>
+    <string name="attention">ATTENTION</string>
+    <string name="wifi_attention_content">You are using metered network. Continue to download?</string>
+    <string name="download">DOWNLOAD</string>
+    <string name="downloading_in_background">Downloading in background</string>
+    <string name="something_wrong">Something went wrong :-(</string>
+    <string name="copy_url">COPY URL</string>
+    <string name="failed_to_download">Failed to download :(</string>
+    <string name="uh_oh" translatable="false">Uh oh :-(</string>
+    <string name="no_items_please_try_again">Something went wrong</string>
+    <string name="retry">RETRY</string>
+    <string name="downloads_title">DOWNLOADS</string>
+    <string name="thanks_to">THANKS TO</string>
+    <string name="contribute_your_code">Contribute your code</string>
+    <string name="follow_me_on_twitter">Follow me on Twitter</string>
+
+    <string name="alipay_url_code" translatable="false">aex09127b4dbo4o7fbvcyb0</string>
+    <string name="official_web_url" translatable="false">http://juniperphoton.net/myersplash</string>
+    <string name="email_url" translatable="false">dengweichao@hotmail.com</string>
+    <string name="github_url" translatable="false">https://github.com/JuniperPhoton/MyerSplashAndroid</string>
+    <string name="twitter_url" translatable="false">https://twitter.com/juniperphoton</string>
+    <string name="weibo_url" translatable="false">
+        https://weibo.com/photon
+    </string>
+    <string name="dim_the_brightness">DIMMING</string>
+
+    <string name="oom_toast">Out of memory occurs. Please contact the develop to solve this. :(</string>
+
+    <string name="failed_to_send_request">Failed to communicate with backend :(</string>
+    <string name="timeout">Request timeout :(</string>
+
+    <string name="photo_by">photo by</string>
+    <string name="recommended_by">recommended by</string>
+    <string name="author_default_name" translatable="false">JuniperPhoton</string>
+    <string name="loading">Loading…</string>
+    <string name="end">The End</string>
+    <string name="recommended_tag">TODAY</string>
+    <string name="copied_tag">COPIED</string>
+    <string name="pivot_new">NEW</string>
+    <string name="pivot_featured">FEATURED</string>
+    <string name="pivot_highlights">HIGHLIGHTS</string>
+
+    <string name="delete_downloading">Delete downloading items</string>
+    <string name="delete_downloaded">Delete downloaded items</string>
+    <string name="delete_failed">Delete failed items</string>
+
+    <string name="share_title">Sharing</string>
+    <string name="email_title">Emailing</string>
+
+    <string name="share_text">Share %s\'s amazing photo from MyerSplash app. Download this photo: %s</string>
+    <string name="search_empty_hint">Input the keyword to search.</string>
+    <string name="all_clear">Cleaned up.</string>
+</resources>

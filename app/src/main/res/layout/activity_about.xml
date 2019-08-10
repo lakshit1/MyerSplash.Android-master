@@ -1,0 +1,193 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#000000"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <androidx.legacy.widget.Space
+                android:id="@+id/top_space"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/about_space"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/about_title_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/top_space">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="@string/image_desc"
+                    android:src="@drawable/icon_launcher"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:text="@string/myer"
+                    android:textColor="@android:color/white"
+                    android:textSize="40sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-bold"
+                    android:gravity="center"
+                    android:text="@string/splash"
+                    android:textColor="@android:color/white"
+                    android:textSize="40sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/about_sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/for_windows_amp_android"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/about_title_layout"/>
+
+            <TextView
+                android:id="@+id/versionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/version_background"
+                android:paddingLeft="8dp"
+                android:paddingTop="4dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/about_sub_title"
+                tools:text="2.0.0"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/versionTextView">
+
+                <TextView
+                    style="@style/AboutSubTitleTextView"
+                    android:layout_marginTop="@dimen/settings_sub_title_margin_top"
+                    android:text="@string/credit"/>
+
+                <TextView
+                    style="@style/AboutSubContentTextView"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:text="@string/settings_credit_content"/>
+
+                <TextView
+                    style="@style/AboutSubTitleTextView"
+                    android:layout_marginTop="@dimen/settings_sub_title_margin_top"
+                    android:text="@string/feedback"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/emailItem"
+                        style="@style/AboutContactItem"
+                        android:contentDescription="@string/image_desc"
+                        android:src="@drawable/ic_email"/>
+
+                    <ImageView
+                        android:id="@+id/githubItem"
+                        style="@style/AboutContactItem"
+                        android:contentDescription="@string/image_desc"
+                        android:src="@drawable/ic_github_icon"/>
+
+                    <ImageView
+                        android:id="@+id/twitterItem"
+                        style="@style/AboutContactItem"
+                        android:contentDescription="@string/image_desc"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_twitter"/>
+
+                    <ImageView
+                        android:id="@+id/weiboItem"
+                        style="@style/AboutContactItem"
+                        android:contentDescription="@string/image_desc"
+                        android:src="@drawable/ic_weibo_social_logo"/>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/AboutSubTitleTextView"
+                    android:layout_marginTop="@dimen/settings_sub_title_margin_top"
+                    android:text="@string/like_this_app"/>
+
+                <TextView
+                    android:id="@+id/rateItem"
+                    style="@style/AboutSubContentTextView"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ripple_large_round_rect"
+                    android:text="@string/give_me_a_rate"/>
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gradient_top_height"
+        android:background="@drawable/gradient_background"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gradient_bottom_height"
+        android:layout_gravity="bottom"
+        android:background="@drawable/gradient_background"
+        android:rotation="180"/>
+</FrameLayout>
