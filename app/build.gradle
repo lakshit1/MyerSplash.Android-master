@@ -21,19 +21,7 @@ android {
         }
     }
 
-signingConfigs {
-        release {
-            def properties = new Properties()
-            properties.load(project.rootProject.file('local.properties').newDataInputStream())
-            def key = properties.getProperty('key')
-            def password = properties.getProperty('password')
 
-            keyAlias key
-            keyPassword password
-            storeFile file('keystore/ms.jks')
-            storePassword password
-        }
-    }
 
     buildTypes {
         debug {
@@ -48,7 +36,7 @@ signingConfigs {
             manifestPlaceholders = [
                     "APP_NAME": "MyerSplash"
             ]
-            signingConfig signingConfigs.release
+            
         }
     }
 
