@@ -41,14 +41,28 @@
             android:clickable="true"
             android:visibility="visible">
 
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:contentDescription="@string/image_desc"
-                android:scaleType="fitXY"
-                android:src="@drawable/vector_ic_file_download"
-                android:visibility="visible"/>
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:elevation="10dp"
+                android:padding="10dp"
+                android:visibility="visible"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="20dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/image_desc"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/vector_ic_file_download"
+                    android:visibility="visible" />
+
+            </androidx.cardview.widget.CardView>
 
         </FrameLayout>
 
