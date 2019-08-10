@@ -17,9 +17,7 @@ class CustomInterceptor : Interceptor {
         val original = request.url().toString()
         val ub = Uri.parse(original).buildUpon()
 
-        if (original.startsWith(Request.BASE_URL)) {
-            ub.appendQueryParameter(CLIENT_ID, BuildConfig.UNSPLASH_APP_KEY)
-        }
+        
 
         builder.url(ub.build().toString())
 
