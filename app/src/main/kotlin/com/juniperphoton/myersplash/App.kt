@@ -20,6 +20,8 @@ class App : Application() {
         instance = this
         Pasteur.init(BuildConfig.DEBUG)
 
-        
+        val config = OkHttpImagePipelineConfigFactory 
+.newBuilder(this, OkHttpClientAPI.createClient()).build() 
+Fresco.initialize(this, config)
     }
 }
